@@ -60,5 +60,7 @@ function reset() {
     $('.e4').text('A4:' + a4)
     $('.e5').text('A5:' + a5)
     $('.e6').text('A6:' + a6)
+     document.getElementById('current').innerHTML = new Date();　
+    setTimeout('current_time()', 1000);
     setTimeout('reset()', 1);
 }
