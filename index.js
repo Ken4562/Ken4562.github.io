@@ -40,11 +40,12 @@ function R(v) {
 
 function st() {
     while (true) {
-        if (a1[0] == a2[0] == a3[0] == a4[0] == a5[0] == a6[0]) {
+        if (a1[0] == a2[0]) {
             return;
         } else {
             RR();
             k++;
+            $('#6565').text(k)
         }
     }
 
