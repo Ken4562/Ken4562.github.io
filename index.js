@@ -4,26 +4,51 @@ var a3 = [];
 var a4 = [];
 var a5 = [];
 var a6 = [];
-var k = 0
-
-$('.abc').click(st)
-$('#6565').text(k)
+var k = 0;
 
 
 RR()
+$('.abc').click(function() {
+    while (true) {
+        $('#6565').text(k)
+        if (a1[0] == a2[0] && a2[0] == a3[0]) {
+            break;
+        } else {
+            RR();
+            k++;
+
+        }
+
+    }
+
+
+
+})
+
 
 
 function RR() {
+    a1.splice(0, a1.length);
+    a2.splice(0, a2.length);
+    a3.splice(0, a3.length);
+    a4.splice(0, a4.length);
+    a5.splice(0, a5.length);
+    a6.splice(0, a6.length);
     R(a1);
     $('.e1').text('A1:' + a1)
+
     R(a2);
     $('.e2').text('A2:' + a2)
+
     R(a3);
     $('.e3').text('A3:' + a3)
+
     R(a4);
     $('.e4').text('A4:' + a4)
+
     R(a5);
     $('.e5').text('A5:' + a5)
+
     R(a6);
     $('.e6').text('A6:' + a6)
 }
@@ -34,19 +59,6 @@ function R(v) {
         var a = Math.floor(Math.random() * 500)
         v.push(a)
 
-    }
-
-}
-
-function st() {
-    while (true) {
-        if (a1[0] == a2[0]) {
-            return;
-        } else {
-            RR();
-            k++;
-            $('#6565').text(k)
-        }
     }
 
 }
