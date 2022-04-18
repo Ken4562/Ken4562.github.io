@@ -53,6 +53,10 @@ function R(v) {
 }
 
 function reset() {
+
+}
+
+function current_time() {
     $('#6565').text(k)
     $('.e1').text('A1:' + a1)
     $('.e2').text('A2:' + a2)
@@ -60,5 +64,7 @@ function reset() {
     $('.e4').text('A4:' + a4)
     $('.e5').text('A5:' + a5)
     $('.e6').text('A6:' + a6)
-    setTimeout('reset()', 1);
+    setTimeout('reset()', 1);　
+    document.getElementById('current').innerHTML = new Date();　
+    setTimeout('current_time()', 1000); //每秒呼叫一次功能: current_time()
 }
