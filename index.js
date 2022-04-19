@@ -97,6 +97,7 @@ function re() {
             s = true
         }
     }
+    current_time()
 }
 
 function getRandomIntInclusive(min, max) {
