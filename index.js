@@ -66,7 +66,6 @@ function current_time() {
     $('.e4').text('A4:' + a4)
     $('.e5').text('A5:' + a5)
     $('.e6').text('A6:' + a6)
-    setTimeout('current_time()', 10);
 }
 
 function re() {
