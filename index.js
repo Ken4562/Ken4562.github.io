@@ -10,7 +10,7 @@ var i2 = prompt('取數範圍?', )
 var i3 = prompt('陣列幾項相等?', )
 var i4 = prompt('共幾項相等?', )
 var s = false;
-
+chrome_options.add_argument('--log-level=1')
 
 
 RR()
