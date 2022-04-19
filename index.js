@@ -5,20 +5,14 @@ var a4 = [];
 var a5 = [];
 var a6 = [];
 var k = 0;
-var i1 = prompt('取數範圍?', )
-var i2 = prompt('取數範圍?', )
-var i3 = prompt('陣列幾項相等?', )
-var i4 = prompt('共幾項相等?', )
-var s = false;
-
 
 
 RR()
 $('.abc').click(function() {
     while (true) {
-        re()
-        if (s == true) {
-            return;
+
+        if (a1[0] == a2[0] && a2[0] == a3[0] && a3[0] == a4[0]) {
+            break;
         } else {
             RR();
             k++;
@@ -50,11 +44,15 @@ function RR() {
 
 
 function R(v) {
-    for (var i = 0; i < i4; i++) {
-        var a = getRandomIntInclusive(Number(i1), Number(i2));
+    for (var i = 0; i < 6; i++) {
+        var a = Math.floor(Math.random() * 500)
         v.push(a)
 
     }
+
+}
+
+function reset() {
 
 }
 
@@ -66,41 +64,7 @@ function current_time() {
     $('.e4').text('A4:' + a4)
     $('.e5').text('A5:' + a5)
     $('.e6').text('A6:' + a6)
-    setTimeout('current_time()', 10);
-}
-
-function re() {
-
-    if (i3 == 2) {
-        if (JSON.stringify(a1) == JSON.stringify(a2)) {
-            s = true
-        }
-    }
-    if (i3 == 3) {
-        if (JSON.stringify(a1) == JSON.stringify(a2) && JSON.stringify(a2) == JSON.stringify(a3)) {
-            s = true
-        }
-    }
-    if (i3 == 4) {
-        if (JSON.stringify(a1) == JSON.stringify(a2) && JSON.stringify(a2) == JSON.stringify(a3) && JSON.stringify(a3) == JSON.stringify(a4)) {
-            s = true
-        }
-    }
-    if (i3 == 5) {
-        if (JSON.stringify(a1) == JSON.stringify(a2) && JSON.stringify(a2) == JSON.stringify(a3) && JSON.stringify(a3) == JSON.stringify(a4) && JSON.stringify(a4) == JSON.stringify(a5)) {
-            s = true
-        }
-    }
-    if (i3 == 6) {
-        if (JSON.stringify(a1) == JSON.stringify(a2) && JSON.stringify(a2) == JSON.stringify(a3) && JSON.stringify(a3) == JSON.stringify(a4) && JSON.stringify(a4) == JSON.stringify(a5) && JSON.stringify(a5) == JSON.stringify(a6)) {
-
-            s = true
-        }
-    }
-}
-
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    setTimeout('reset()', 1);　
+    document.getElementById('current').innerHTML = new Date();　
+    setTimeout('current_time()', 1000); //每秒呼叫一次功能: current_time()
 }
