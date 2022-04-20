@@ -56,7 +56,7 @@ function R(v) {
 }
 
 function text() {
-    $('#6565').text(k)
+    $('#gg').text(k)
     $('.e1').text('A1:' + a1)
     $('.e2').text('A2:' + a2)
     $('.e3').text('A3:' + a3)
