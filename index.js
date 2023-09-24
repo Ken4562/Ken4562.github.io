@@ -7,7 +7,7 @@ var a6 = [];
 var k = 0;
 var i1 = prompt('取數範圍?', )
 var i2 = prompt('取數範圍?', )
-var i3 = prompt('陣列幾項相等?', )
+var i3 = prompt('幾個陣列相等?', )
 var i4 = prompt('共幾項相等?', )
 var s = false;
 RR()
